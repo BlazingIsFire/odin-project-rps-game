@@ -1,0 +1,129 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.wrapper {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: gray;
+    display: grid;
+    place-items: center;
+    transition: opacity 5s, visibility 3.7s;
+}
+
+.loader {
+    border: 16px solid black; /* Light grey */
+    border-top: 16px solid red; /* Blue */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: loaderSpin 0.5s linear infinite;
+}
+
+@keyframes loaderSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.fade {
+    opacity: 0.3;
+    visibility: hidden;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: black;
+    flex-direction: column;
+}
+
+.title-text {
+    display: flex;
+    /*justify-content: center;*/
+    color: white;
+    font-size: 50px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0% }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: red; }
+  }
+
+.container-btns {
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 50px;
+    padding: 25px;
+    margin: 15px;
+    border-radius: 30px;
+    border: 1px solid white;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px red;
+    transition: ease-in-out 0.2s;
+}
+
+.score-label-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.score-label {
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    color: white;
+}
+
+.score-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.score-label-player {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+.score-label-computer {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+.footer-text-label {
+    color: white;
+    font-size: 30px;
+}
