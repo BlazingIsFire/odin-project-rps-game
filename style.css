@@ -3,6 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .wrapper {
@@ -70,7 +71,7 @@ html, body {
   }
 
 .container-btns {
-    margin-top: 150px;
+    margin-top: 110px;
     margin-bottom: 100px;
 }
 
@@ -87,7 +88,21 @@ html, body {
 
 .btn:hover {
     box-shadow: 0 0 20px red;
-    transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.1s;
+}
+
+.alert-text {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: white
+}
+
+.subalert-text {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color: red;
 }
 
 .score-label-container {
@@ -114,16 +129,85 @@ html, body {
 .score-label-player {
     font-size: 30px;
     font-weight: 700;
-    color: white;
+    color: red;
 }
 
 .score-label-computer {
     font-size: 30px;
     font-weight: 700;
-    color: white;
+    color: red;
 }
 
 .footer-text-label {
     color: white;
     font-size: 30px;
+}
+
+.end-game-modal-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    animation-duration: 2s;
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.modal-container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 70vh;
+    height: 50vh;
+    border: 1px solid white;
+    border-radius: 40px;
+    background-color: black;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.end-game-gameover {
+    font-size: 60px;
+    font-weight: 900;
+    color: red;
+}
+
+.end-game-winner {
+    font-size: 30px;
+    padding: 10px;
+    font-weight: 700;
+    color: red;
+    text-align: center;
+}
+
+.end-game-btn {
+    color: white;
+    padding: 12px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 8px;
+    border: 1px solid white;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.end-game-btn:hover {
+    background-color: white;
+    color: red;
+    transition: ease-in-out 0.3s;
 }
