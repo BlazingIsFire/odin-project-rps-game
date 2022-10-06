@@ -1,8 +1,6 @@
 // Learning Javascript
 
-console.log('Hello World!');
-
-// const options = ['rock', 'paper', 'scissors'];
+// Loader Wrapper Fade Out
 const fadeOut = () => {
     const loaderWrapper = 
     document.querySelector('.wrapper');
@@ -31,7 +29,7 @@ var endGameModal = document.getElementById("end-game-modal");
 var endGameButton = document.querySelector(".end-game-btn");
 var endGameWinner = document.querySelector(".end-game-winner");
 
-// Button selections
+// RPS Button selections
 rockbutton.onclick = function(){
     playerChoice = rock;
     return playRound(playerChoice, computerChoice);
@@ -44,13 +42,14 @@ scissorsbutton.onclick = function(){
     playerChoice = scissors;
     return playRound(playerChoice, computerChoice);
 }
-
+ // Computer making its choice
 function getComputerChoice() {
         computerChoice = options[Math.floor(Math.random() * options.length)];
-        console.log(computerChoice);
+        return computerChoice;
 }
 getComputerChoice();
 
+// Winner of the current round
 function winner(playerChoice, computerChoice) {
     if (playerChoice == computerChoice){
         return "Tie";
@@ -65,6 +64,7 @@ function winner(playerChoice, computerChoice) {
     }
 }
 
+// Playing the current round
 function playRound(playerChoice, computerChoice) {
     if (winner(playerChoice, computerChoice) === "Tie"){
         footerLabel.innerHTML = "It's a Tie!";
@@ -83,6 +83,7 @@ function playRound(playerChoice, computerChoice) {
     getComputerChoice();
 }
 
+// Declaring the winner of the game
 function declareWinner(playerScore, computerScore) {
     if (playerScore === 5){
         gameWinner = "You";
@@ -92,6 +93,7 @@ function declareWinner(playerScore, computerScore) {
     endGame(gameWinner);
 }
 
+// End of game modal
 function endGame(gameWinner) {
     if (gameWinner === "You"){
         endGameWinner.innerHTML = "You have won the game!"
@@ -101,6 +103,7 @@ function endGame(gameWinner) {
     endGameModal.style.display = "flex";
 }
 
+// Reset game button
 endGameButton.onclick = function(){
     playerScore = 0;
     computerScore = 0;

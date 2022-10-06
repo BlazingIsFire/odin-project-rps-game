@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
+    <!--Start of header-->
     <head>
         <meta charset="UTF-8">
         <title>Blazing | Rock, Paper, Scissors</title>
         <link rel="stylesheet" href="style.css">
         <link rel="JavaScript" href="functions.js">
     </head>
+    <!--Start of body content-->
     <body>
-        <div class="wrapper">
+        <div class="wrapper"> <!--Screen Loader-->
             <div class="loader"></div>
         </div>
         <div class="container1">
+            <!--Title Container / automatic-->
             <div class="title-container">
                 <a class="title-text">Rock, paper, or scissors...</a>
                 <a class="alert-text">Choose your weapon...</a>
                 <a class="subalert-text">Best to 5...</a>
             </div>
+            <!--RPS Button Container-->
             <div class="container-btns">
                 <div class="button-options">
                     <a class="btn" id="rock">Rock</a>
@@ -23,10 +27,12 @@
                     <a class="btn" id="scissors">Scissors</a>
                 </div>
             </div>
+            <!--Score Container-->
             <div class="score-label-container">
                 <a class="score-label">You're score:</a>
                 <a class="score-label">Computer's Score:</a>
             </div>
+            <!--Player and computer scores-->
             <div class="score-container">
                 <a class="score-label-player">0</a>
                 <a class="score-label-computer">0</a>
@@ -34,6 +40,7 @@
             <div class="footer-text">
                 <a class="footer-text-label">Select a option to play!</a>
             </div>
+            <!--End game modal container-->
             <div class="end-game-modal-container" id="end-game-modal">
                 <div class="modal-container2">
                     <a class="end-game-gameover">Game Over!</a>
@@ -42,6 +49,7 @@
                 </div>
             </div>
         </div>
+        <!--Javascript source-->
         <script src="index.js"></script>
     </body>
 </html>

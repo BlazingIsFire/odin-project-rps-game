@@ -6,6 +6,7 @@ html, body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/*Loader Wrapper*/
 .wrapper {
     position: fixed;
     inset: 0;
@@ -35,6 +36,7 @@ html, body {
     visibility: hidden;
 }
 
+/*Beginning of on screen objects*/
 .container1 {
     display: flex;
     align-items: center;
@@ -44,9 +46,9 @@ html, body {
     flex-direction: column;
 }
 
+/*Automated typewriter text*/
 .title-text {
     display: flex;
-    /*justify-content: center;*/
     color: white;
     font-size: 50px;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -70,6 +72,7 @@ html, body {
     50% { border-color: red; }
   }
 
+/*RPS Buttons*/
 .container-btns {
     margin-top: 110px;
     margin-bottom: 100px;
@@ -91,6 +94,7 @@ html, body {
     transition: ease-in-out 0.1s;
 }
 
+/*Alert Text labels*/
 .alert-text {
     display: flex;
     justify-content: center;
@@ -105,6 +109,7 @@ html, body {
     color: red;
 }
 
+/*Score containers and labels*/
 .score-label-container {
     width: 100%;
     display: flex;
@@ -143,6 +148,7 @@ html, body {
     font-size: 30px;
 }
 
+/*Beginning of Modal container and contents*/
 .end-game-modal-container {
     display: none;
     justify-content: center;
